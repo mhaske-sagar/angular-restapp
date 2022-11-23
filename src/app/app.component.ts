@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rest';
+  down:Boolean=true;
+
+  gg(){
+    
+    this.down=!this.down
+}
 }

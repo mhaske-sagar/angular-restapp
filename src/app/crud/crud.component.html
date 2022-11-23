@@ -1,0 +1,65 @@
+
+<br><br>
+<div>
+    <form action="">
+        <table>
+            <tr>
+                <th colspan="2" style="text-align:center;background-color: burlywood;">Sign Up Here</th>
+
+            </tr>
+            <br>
+            <tr>
+                <th><label for="">Name</label></th>
+                <th><input type="text" placeholder="Enter name here" [(ngModel)]="user.name" name="name"></th>
+            </tr>
+            <br>
+            <tr>
+                <th><label for="">Password</label></th>
+                <th><input type="number" placeholder=" enter password here" [(ngModel)]="user.password" name="password"></th>
+            </tr>
+            <br>
+            <tr>
+                <th><label for="">Mobile</label></th>
+                <th><input type="text" [(ngModel)]="user.mobile" placeholder="enter mobile here" name="mobile"></th>
+            </tr><br>
+
+        
+        </table>
+    <input id="s1" style="text-align:center" type="submit" value="Sign Up" (click)="signup()">
+    <input id="s1" type="submit" value="view" (click)="view()" >
+    <input type="submit" value="update" (click)="update()">
+    <input type="submit" value="delete" (click)="delet()">
+</form><br><br>
+
+<hr><br>
+<form action="">
+        name:<input type="search" name="select" [(ngModel)]="select"> <br><br>
+        select : <select name="select"[(ngModel)]="select" id="">
+            <option type="search" value=""></option>
+            <option value="s">s</option>
+            <option value="a">a</option>
+
+        </select>
+    
+    
+    <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>password</th>
+                <th>mobile</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let id of b">
+            <tr *ngIf="select==id.name[0] ||
+                       select==id.name">
+                <th>{{id.name}}</th>
+                <th>{{id.password}}</th>
+                <th>{{id.mobile}}</th>
+            </tr>
+        </ng-container>
+        </tbody>
+    </table>
+</form>
+</div>

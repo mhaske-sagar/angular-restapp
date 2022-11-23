@@ -1,0 +1,17 @@
+form
+{
+   margin-left: 40%;
+   margin-top: 5%;
+   
+
+}
+#s1:hover{
+    background-color:skyblue;
+    color: brown;
+
+}
+#s1{
+    color: brown;
+    border-radius: 10px;
+    border: none;
+}
